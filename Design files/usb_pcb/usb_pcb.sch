@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:usb_pcb-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -20,12 +19,12 @@ Wire Wire Line
 $Comp
 L Amplifier_Operational:MCP601-xP U4
 U 1 1 5E0E8D3C
-P 6650 2550
-F 0 "U4" H 6800 2650 50  0000 L CNN
-F 1 "MCP6021-I/P" H 6650 2300 50  0000 L CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 6550 2350 50  0001 L CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf" H 6800 2700 50  0001 C CNN
-	1    6650 2550
+P 6100 2550
+F 0 "U4" H 6250 2650 50  0000 L CNN
+F 1 "MCP6021-I/P" H 6050 2350 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 6000 2350 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf" H 6250 2700 50  0001 C CNN
+	1    6100 2550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -64,27 +63,27 @@ $EndComp
 $Comp
 L Device:R R12
 U 1 1 5E110072
-P 5050 3150
-F 0 "R12" H 5120 3196 50  0000 L CNN
-F 1 "33k" H 5120 3105 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4980 3150 50  0001 C CNN
-F 3 "~" H 5050 3150 50  0001 C CNN
-	1    5050 3150
+P 4500 3150
+F 0 "R12" H 4570 3196 50  0000 L CNN
+F 1 "33k" H 4570 3105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4430 3150 50  0001 C CNN
+F 3 "~" H 4500 3150 50  0001 C CNN
+	1    4500 3150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R11
 U 1 1 5E1104F8
-P 5050 1900
-F 0 "R11" H 5120 1946 50  0000 L CNN
-F 1 "33k" H 5120 1855 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4980 1900 50  0001 C CNN
-F 3 "~" H 5050 1900 50  0001 C CNN
-	1    5050 1900
+P 4500 1900
+F 0 "R11" H 4570 1946 50  0000 L CNN
+F 1 "33k" H 4570 1855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4430 1900 50  0001 C CNN
+F 3 "~" H 4500 1900 50  0001 C CNN
+	1    4500 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 1650 6550 2250
+	6000 1650 6000 2250
 Wire Wire Line
 	3800 2450 4000 2450
 Wire Wire Line
@@ -303,7 +302,7 @@ F 3 "~" H 7550 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Timer:NE555 U2
+L usb_pcb-rescue:NE555-Timer U2
 U 1 1 5DF957E5
 P 8350 2750
 F 0 "U2" H 8050 3100 50  0000 C CNN
@@ -314,9 +313,9 @@ F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 8350 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6550 2850 6550 3650
+	6000 2850 6000 3650
 Wire Wire Line
-	5050 3300 5050 3650
+	4500 3300 4500 3650
 Wire Wire Line
 	4000 3300 4000 3650
 $Comp
@@ -394,10 +393,6 @@ Wire Wire Line
 	3200 2700 3200 2450
 Wire Wire Line
 	3200 2250 3200 1950
-Wire Wire Line
-	6950 2550 7850 2550
-Wire Wire Line
-	6550 3650 7550 3650
 Connection ~ 7550 3650
 Wire Wire Line
 	2900 1950 3200 1950
@@ -405,37 +400,27 @@ Wire Wire Line
 	1650 2700 3200 2700
 Text Notes 1850 2450 0    50   ~ 0
 D2 can be replaced with any \n1N00x series diode except\n 1N4001 and 1N4002
-Connection ~ 6550 3650
 Wire Wire Line
 	4000 1500 4000 1650
-Wire Wire Line
-	4000 1650 4350 1650
 Connection ~ 4000 1650
 Wire Wire Line
 	4000 1650 4000 2350
-Connection ~ 4350 1650
 Wire Wire Line
-	4350 1650 5050 1650
+	4500 1750 4500 1650
 Wire Wire Line
-	5050 1750 5050 1650
-Connection ~ 5050 1650
+	4500 2050 4500 2150
 Wire Wire Line
-	5050 2050 5050 2150
+	4500 2150 4500 2900
+Connection ~ 4500 2150
 Wire Wire Line
-	5050 2150 5050 2900
-Connection ~ 5050 2150
+	4000 3650 4500 3650
+Connection ~ 4500 2900
 Wire Wire Line
-	4000 3650 5050 3650
-Connection ~ 5050 3650
-Wire Wire Line
-	5050 3650 6550 3650
-Connection ~ 5050 2900
-Wire Wire Line
-	5050 2900 5050 3000
-Text Notes 5250 3050 0    50   ~ 0
+	4500 2900 4500 3000
+Text Notes 4700 3050 0    50   ~ 0
 Position 1-4: active high input\nPosition 3-6: active low input
 Wire Wire Line
-	5050 2150 5200 2150
+	4500 2150 4650 2150
 $Comp
 L power:+5V #PWR08
 U 1 1 5E3A392F
@@ -557,10 +542,6 @@ Wire Wire Line
 	9700 2950 9700 3200
 Wire Wire Line
 	9700 3300 9700 3650
-Wire Wire Line
-	4350 1650 4350 2000
-Wire Wire Line
-	5050 1650 6550 1650
 $Comp
 L Connector:Conn_01x08_Male P7
 U 1 1 5EA7FFAB
@@ -573,36 +554,19 @@ F 3 "~" H 4800 5950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6350 2450 6200 2450
+	5800 2450 5650 2450
 Wire Wire Line
-	6200 2450 6200 2500
+	5650 2450 5650 2500
 Wire Wire Line
-	6350 2650 6200 2650
+	5800 2650 5650 2650
 Wire Wire Line
-	6200 2650 6200 2600
+	5650 2650 5650 2600
 Wire Wire Line
-	5200 2500 5200 2550
+	4650 2700 4650 2900
 Wire Wire Line
-	5200 2700 5200 2900
+	4650 2900 4500 2900
 Wire Wire Line
-	5200 2900 5050 2900
-Wire Wire Line
-	5200 2400 5200 2150
-Wire Wire Line
-	4000 2450 4000 2550
-Wire Wire Line
-	5200 2550 4350 2550
-Connection ~ 5200 2550
-Wire Wire Line
-	5200 2550 5200 2600
-Connection ~ 4000 2550
-Wire Wire Line
-	4000 2550 4000 3000
-Wire Wire Line
-	4350 2100 4350 2550
-Connection ~ 4350 2550
-Wire Wire Line
-	4350 2550 4000 2550
+	4650 2400 4650 2150
 Wire Wire Line
 	4600 4600 4600 5550
 Wire Wire Line
@@ -788,27 +752,27 @@ Power supply
 $Comp
 L Connector:Conn_01x04_Male P3
 U 1 1 5EA83BB5
-P 5400 2600
-F 0 "P3" H 5450 2250 50  0000 R CNN
-F 1 "Conn_01x05_Male" H 5372 2573 50  0001 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5400 2600 50  0001 C CNN
-F 3 "~" H 5400 2600 50  0001 C CNN
-	1    5400 2600
+P 4850 2600
+F 0 "P3" H 4900 2250 50  0000 R CNN
+F 1 "Conn_01x05_Male" H 4822 2573 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4850 2600 50  0001 C CNN
+F 3 "~" H 4850 2600 50  0001 C CNN
+	1    4850 2600
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_01x02_Male P4
 U 1 1 5EA87CD3
-P 6000 2500
-F 0 "P4" H 6150 2650 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 5972 2473 50  0001 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6000 2500 50  0001 C CNN
-F 3 "~" H 6000 2500 50  0001 C CNN
-	1    6000 2500
+P 5450 2500
+F 0 "P4" H 5600 2650 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 5422 2473 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5450 2500 50  0001 C CNN
+F 3 "~" H 5450 2500 50  0001 C CNN
+	1    5450 2500
 	1    0    0    -1  
 $EndComp
 $Bitmap
-Pos 5700 2550
+Pos 5150 2550
 Scale 0.100000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 04 B0 00 00 05 F7 08 02 00 00 00 D0 69 15 
@@ -2463,48 +2427,48 @@ A5 10 02 00 00 C4 D4 BF 00 A7 D5 9A CB 2F 7B 66 2C 00 00 00 00 49 45 4E 44 AE 42
 EndData
 $EndBitmap
 Wire Notes Line
-	5385 2400 5458 2400
+	4835 2400 4908 2400
 Wire Notes Line
-	5458 2400 5458 2330
+	4908 2400 4908 2330
 Wire Notes Line
-	5458 2330 5516 2330
+	4908 2330 4966 2330
 Wire Notes Line
-	5414 2502 5506 2502
+	4864 2502 4956 2502
 Wire Notes Line
-	5506 2502 5506 2501
+	4956 2502 4956 2501
 Wire Notes Line
-	5408 2600 5501 2600
+	4858 2600 4951 2600
 Wire Notes Line
-	5408 2700 5458 2700
+	4858 2700 4908 2700
 Wire Notes Line
-	5458 2700 5458 2763
+	4908 2700 4908 2763
 Wire Notes Line
-	5458 2763 5505 2763
+	4908 2763 4955 2763
 Wire Notes Line
-	5895 2682 5944 2682
+	5345 2682 5394 2682
 Wire Notes Line
-	5944 2682 5944 2600
+	5394 2682 5394 2600
 Wire Notes Line
-	5944 2600 5992 2600
+	5394 2600 5442 2600
 Wire Notes Line
-	5990 2501 5944 2501
+	5440 2501 5394 2501
 Wire Notes Line
-	5944 2501 5944 2413
+	5394 2501 5394 2413
 Wire Notes Line
-	5944 2413 5902 2413
+	5394 2413 5352 2413
 $Comp
 L Connector:Conn_01x02_Male P2
 U 1 1 5EA32E3A
-P 4550 2100
-F 0 "P2" H 4637 2162 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 4522 2073 50  0001 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4550 2100 50  0001 C CNN
-F 3 "~" H 4550 2100 50  0001 C CNN
-	1    4550 2100
+P 6850 3100
+F 0 "P2" H 6937 3162 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 6822 3073 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6850 3100 50  0001 C CNN
+F 3 "~" H 6850 3100 50  0001 C CNN
+	1    6850 3100
 	-1   0    0    1   
 $EndComp
 $Bitmap
-Pos 4760 2072
+Pos 7060 3072
 Scale 0.100000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 80 00 00 05 00 08 02 00 00 00 58 B8 74 
@@ -3135,21 +3099,21 @@ A3 91 9E 01 00 FE DF 71 08 0B 00 02 04 18 00 02 04 18 00 02 04 18 00 02 04 18 00
 EndData
 $EndBitmap
 Wire Notes Line
-	4780 2282 4780 2379
+	7080 3282 7080 3379
 Wire Notes Line
-	4780 2379 4632 2379
+	7080 3379 6932 3379
 Wire Notes Line
-	4632 2379 4632 2105
+	6932 3379 6932 3105
 Wire Notes Line
-	4632 2105 4559 2105
+	6932 3105 6859 3105
 Wire Notes Line
-	4782 1850 4782 1781
+	7082 2850 7082 2781
 Wire Notes Line
-	4782 1781 4634 1781
+	7082 2781 6934 2781
 Wire Notes Line
-	4634 1781 4634 1998
+	6934 2781 6934 2998
 Wire Notes Line
-	4634 1998 4561 1998
+	6934 2998 6861 2998
 Wire Wire Line
 	6450 6100 8150 6100
 $Comp
@@ -3913,9 +3877,9 @@ Wire Notes Line
 	4200 4200 7300 4200
 Wire Notes Line
 	7300 4200 7300 950 
-Text Notes 5300 2150 0    50   ~ 0
+Text Notes 4750 2150 0    50   ~ 0
 Polarity selection switch
-Text Notes 4400 2500 0    50   ~ 0
+Text Notes 6700 3500 0    50   ~ 0
 Manual trigger
 Text Notes 10250 1050 0    50   ~ 0
 TTL outputs
@@ -4222,4 +4186,39 @@ F 3 "~" H 5450 6750 50  0001 C CNN
 $EndComp
 Text Notes 5900 6650 0    50   ~ 0
 OUTPUT SIDE\nMOUNTING HOLES
+Wire Wire Line
+	4000 1650 4500 1650
+Wire Wire Line
+	4000 2450 4000 2550
+Wire Wire Line
+	4650 2500 4650 2550
+Connection ~ 4500 1650
+Connection ~ 4500 3650
+Connection ~ 6000 3650
+Wire Wire Line
+	6000 3650 6650 3650
+Wire Wire Line
+	4500 3650 6000 3650
+Wire Wire Line
+	4500 1650 6000 1650
+Wire Wire Line
+	4650 2550 4000 2550
+Connection ~ 4650 2550
+Wire Wire Line
+	4650 2550 4650 2600
+Connection ~ 4000 2550
+Wire Wire Line
+	4000 2550 4000 3000
+Wire Wire Line
+	6400 2550 6650 2550
+Wire Wire Line
+	6650 2550 6650 3000
+Connection ~ 6650 2550
+Wire Wire Line
+	6650 2550 7850 2550
+Wire Wire Line
+	6650 3100 6650 3650
+Connection ~ 6650 3650
+Wire Wire Line
+	6650 3650 7550 3650
 $EndSCHEMATC
